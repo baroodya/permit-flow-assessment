@@ -53,7 +53,7 @@ export const questionaireSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
+// Export each action by name
 export const { 
   answerQuestion, 
   goToQuestion, 
