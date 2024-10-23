@@ -8,7 +8,7 @@ export type QuestionaireState = {
   currentQuestion: Question|null;
   answers: Record<number, String[]>;
   selectedOptions: String[];
-}
+};
 
 export const questionaireSlice = createSlice({
   name: 'questionaire',

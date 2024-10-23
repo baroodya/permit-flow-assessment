@@ -8,7 +8,6 @@ import {
 import MultipleChoiceQuestion from "./MultipleChoiceQuestion";
 import Resolution from "./Resolution";
 import { QuestionTypes, getNextQuestion } from "../data/questions";
-import { useAppDispatch, useAppSelector } from '../store/store';
 import { 
   answerQuestion, 
   finishQuestionaire, 
@@ -17,6 +16,7 @@ import {
   resetQuestionaire, 
   selectOptions 
 } from "../store/questionaireSlice";
+import { useAppDispatch, useAppSelector } from '../store/store';
 
 const Questionaire = () => {
   const dispatch = useAppDispatch();
@@ -49,7 +49,7 @@ const Questionaire = () => {
 
   const handleBack = () => {
     dispatch(lastQuestion());
-  }
+  };
 
   return (
     <Box sx={{ maxWidth: 400, margin: 'auto', padding: 2 }}>
@@ -76,7 +76,7 @@ const Questionaire = () => {
         </Box>
       </>
       : <>
-        <Resolution answers={answers} />
+        <Resolution />
         <Box sx={{ 
           display: "flex", 
           marginTop: 2, 

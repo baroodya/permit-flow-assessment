@@ -1,14 +1,15 @@
 export enum QuestionTypes {
   SingleSelect = 1,
   MultiSelect = 2,
-}
+};
 
 export type Question = {
   id: number;
   question: String;
   type: QuestionTypes;
   options: Record<number, String>;
-}
+};
+
 export const questions = [{
     "id": 0,
     "question": "What residential work are you doing? ",
@@ -27,7 +28,7 @@ export const questions = [{
     'type': QuestionTypes.MultiSelect,
     'options': {0:'Garage door replacement', 1:'Exterior doors', 2:'Fencing', 3:'Other'}
   }
-]
+];
 
 export const getNextQuestion = (currentIndex: number, selectedOptions: String[]) => {
   switch (currentIndex) {

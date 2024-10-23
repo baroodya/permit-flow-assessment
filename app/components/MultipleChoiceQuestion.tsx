@@ -9,7 +9,6 @@ import {
 
 import { Question, QuestionTypes } from "../data/questions";
 import { useAppSelector } from '../store/store';
-import { QuestionaireState } from "../store/questionaireSlice";
 
 
 interface MultipleChoiceQuestionProps {

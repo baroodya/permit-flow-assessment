@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
-import { 
-  Typography
-} from '@mui/material';
+import React from 'react';
+import { Typography } from '@mui/material';
 
 import { ResolutionType, getResolution } from "../data/resolutions";
+import { useAppSelector } from '../store/store';
 
-interface ResolutionProps {
-  answers: Record<number, String[]>;
-}
-const Resolution = ({ answers }: ResolutionProps) => {
+const Resolution = () => {
+  const answers = useAppSelector(state => state.questionaire.answers);
   const resolution:  ResolutionType = getResolution(answers);
 
   return (
