@@ -77,6 +77,11 @@ CREATE INDEX idx_user_responses_session ON user_responses(session_id);
 CREATE INDEX idx_user_responses_question ON user_responses(question_id);
 CREATE INDEX idx_questionnaire_sessions_user ON questionnaire_sessions(user_id);
 
+-- Insert all question types
+INSERT INTO question_type (id, type) VALUES 
+    (1, 'Single Select'),
+    (2, 'Multi Select');
+
 -- Insert all questions
 INSERT INTO questions (id, question, type) VALUES 
     (0, 'What residential work are you doing?', '1'),
@@ -120,8 +125,3 @@ INSERT INTO resolution_notes (resolution_id, note, note_order) VALUES
     -- Notes for resolution 2
     (2, 'A building permit is required.', 0),
     (2, 'Submit application for OTC review.', 1);
-
--- Insert all question types
-INSERT INTO question_type (id, type) VALUES 
-    (1, 'Single Select'),
-    (2, 'Multi Select');
